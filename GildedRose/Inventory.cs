@@ -24,58 +24,54 @@ namespace GildedRose
         {
             // TODO ...
 
-            // Hint: Iterate through this.items and check Name property to access specific item
+            
             foreach (var item in items)
             {
                 if (item.SellIn > 0 && item.Name != "Aged Brie" && item.Name != "Sulfuras, Hand of Ragnaros" && item.Name != "Backstage passes to a TAFKAL80ETC concert" && item.Name != "Conjured Mana Cake")
                 {
                     item.Quality -= 1;
-                }
-                else if (item.SellIn <= 0 && item.Name != "Aged Brie" && item.Name != "Sulfuras, Hand of Ragnaros" && item.Name != "Backstage passes to a TAFKAL80ETC concert" && item.Name != "Conjured Mana Cake")
+                 }
+                    else if (item.SellIn <= 0 && item.Name != "Aged Brie" && item.Name != "Sulfuras, Hand of Ragnaros" && item.Name != "Backstage passes to a TAFKAL80ETC concert" && item.Name != "Conjured Mana Cake")
                 {
                     item.Quality -= 2;
                 }
-                else if (item.Name == "Aged Brie" && item.SellIn > 0)
+                    else if (item.Name == "Aged Brie" && item.SellIn > 0)
                 {
                     item.Quality += 1;
                 }
-                else if (item.Name == "Aged Brie" && item.SellIn <= 0)
+                    else if (item.Name == "Aged Brie" && item.SellIn <= 0)
                 {
                     item.Quality += 2;
                 }
-                else if (item.Name == "Conjured Mana Cake" && item.SellIn > 0)
+                    else if (item.Name == "Conjured Mana Cake" && item.SellIn > 0)
                 {
                     item.Quality -= 2;
                 }
-                else if (item.Name == "Conjured Mana Cake" && item.SellIn <= 0)
+                    else if (item.Name == "Conjured Mana Cake" && item.SellIn <= 0)
                 {
                     item.Quality -= 4;
                 }
-                else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+                    else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    if (item.SellIn > 10)
+                        if (item.SellIn > 10)
                     {
                         item.Quality += 1;
                     }
-                    else if (item.SellIn > 5 && item.SellIn <= 10)
+                              else if (item.SellIn > 5 && item.SellIn <= 10)
                     {
-                        item.Quality += 2;
+                                item.Quality += 2;
                     }
-                    else if (item.SellIn > 0 && item.SellIn <= 5)
+                               else if (item.SellIn > 0 && item.SellIn <= 5)
                     {
-                        item.Quality += 3;
+                               item.Quality += 3;
                     }
-                    else if (item.SellIn <= 0)
+                              else if (item.SellIn <= 0)
                     {
-                        item.Quality = 0;
-                    }
+                               item.Quality = 0;
+                    }   
 
                 }
-
-
-
-
-                if (item.Quality < 0) //&& //||
+                     if (item.Quality < 0)
                 {
                     item.Quality = 0;
                 }
